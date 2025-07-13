@@ -110,7 +110,7 @@ function cerrarSesion(){
           <label>Password</label>
           <input type="password" name="password" value={passwordInicio} onChange={(evento) => setPasswordInicio(evento.target.value)} placeholder='password' />
           <button type="submit" className="btn-form">Iniciar sesion</button>
-          <img src="./src/assets/btn-google.png" alt="" onClick={loginGmail} className="link-google"/>
+          <img src="../src/assets/btn-google.png" alt="" onClick={loginGmail} className="link-google"/>
         </div>
       </form>
       </div>
