@@ -1,0 +1,606 @@
+#root {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.div-banner {
+  background-image: url("../assets/467165490018381.png");
+  height: 100px;
+  background-size: cover;
+  display: flex;
+  border-radius: 10px;
+}
+
+.banner-titulo {
+  margin-left: 20px;
+}
+
+.nav {
+  height: 90px;
+}
+.nav-ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 0;
+}
+.nav-link {
+  color: rgb(20, 183, 224);
+  text-decoration: none;
+  color: rgb(181, 235, 248);
+}
+.nav-ul li {
+  padding: 10px;
+}
+.nav-ul li:hover {
+  border-top: 3px solid rgb(109, 64, 182);
+  scale: 1.4;
+}
+.hamburguesa-menu {
+  display: none;
+}
+.carrito-icon {
+  align-items: center;
+  margin-left: 2px;
+  position: relative;
+  top: 2.9px;
+}
+
+/* Main */
+
+.div-main {
+  background-image: url("/src/assets/banner-main.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px;
+  color: white;
+  font-weight: bolder;
+}
+.main-p {
+  max-width: 600px;
+  margin: auto;
+  background-color: rgba(5, 98, 180, 0.82);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* NOSOTROS */
+
+.img-nosotros {
+  background-image: url("/src/assets/banner-nos.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: auto;
+  padding: 60px 0;
+}
+
+.div-nos {
+  margin: auto;
+  max-width: 600px;
+  background-color: rgba(5, 98, 180, 0.473);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* FORMULRIO DE CONTACTO */
+/* cabeza del formulario */
+
+.contacto-icono {
+  font-size: 40px;
+  align-self: center;
+  margin: 20px;
+}
+.cabeza-form-contacto {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(163, 38, 90, 0.877);
+  justify-content: center;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 30px 30px 0 0;
+}
+.cabeza-form-contacto h2 {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+/* campos del formulario */
+
+.contacto-formulario {
+  color: aliceblue;
+}
+.div-contacto {
+  background-color: rgba(109, 64, 182, 0.301);
+  max-width: 400px;
+  margin: auto;
+  margin-top: 0;
+  border-radius: 0 0 30px 30px;
+  padding-bottom: 20px;
+}
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: start;
+  padding: 20px;
+}
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 350px;
+  margin: 6px auto 10px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #005892;
+  outline: none;
+  font-size: medium;
+  padding: 8px 0;
+}
+.formulario-contacto textarea {
+  background-color: rgba(109, 64, 182, 0.11);
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  padding: 5px;
+  margin-top: 15px;
+}
+.p-formulario {
+  max-width: 70vw;
+  display: flex;
+  margin: auto;
+  margin-top: 30px;
+  text-align: start;
+}
+.btn-enviarConsulta {
+  max-width: 200px;
+  height: 60px;
+  font-size: medium;
+  border: solid 1px rgba(163, 38, 90, 0.877);
+  background-color: transparent;
+  margin: 15px auto 0;
+  border-radius: 12px;
+}
+.btn-enviarConsulta:hover {
+  background-color: rgba(163, 38, 90, 0.877);
+  scale: 1.1;
+  transition: all 0.1s ease;
+}
+
+/* AGREGAR ARTICULOS*/
+
+.form-agregarArt {
+  background-image: url("src/assets/admin.png");
+  background-position-Y: 50px;
+  background-size: 500px;
+  background-position-X: -250px;
+  background-repeat: no-repeat;
+
+}
+.titulo-agregarArt, .titulo-editarArt{
+  background-color:rgba(163, 38, 90, 0.877);
+  height:50px;
+  align-content:center;
+}
+
+.form-cargaArt, .form-editarArt {
+  display: grid;
+  grid-template-columns:  150px 250px;
+  grid-template-rows: repeat(3, 50px) 220px 80px;
+  grid-template-areas:
+    "img imgUrl"
+    "nombre nombreUrl"
+    "precio precioUrl"
+    "desc descUrl"
+    "btnEnviar btnEnviar";
+
+  margin: auto;
+  width: 400px;
+  align-items: center;
+}
+
+.carga-img, .editar-img {
+  grid-area: img;
+  justify-self: start;
+}
+
+.carga-imgUrl,.editar-imgUrl {
+  grid-area: imgUrl;
+}
+.carga-nombre, .editar-nombre {
+  grid-area: nombre;
+  justify-self: start;
+}
+.carga-nombreUrl, .editar-nombreUrl {
+  grid-area: nombreUrl;
+}
+.carga-precio, .editar-precio{
+  grid-area: precio;
+  justify-self: start;
+}
+.carga-precioUrl, .editar-precioUrl{
+  grid-area: precioUrl;
+}
+.carga-desc, .editar-desc{
+  grid-area: desc;
+  align-self: start;
+  justify-self: start;
+}
+.carga-descUrl, .editar-descUrl{
+  grid-area: descUrl;
+  height:200px;
+}
+.btn-enviar{
+  grid-area: btnEnviar;
+  height:70px;
+}
+
+/* EDITAR ARTICULOS */
+
+
+
+
+/* FORMULARIO LOGIN */
+
+.usuario-activo{
+  height: 100px;
+  align-content: center;
+
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  letter-spacing: 1.7px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: 50px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.form-logeo {
+  justify-content: center;
+ 
+  flex-direction: column;
+  background-image: url("src/assets/sesion.png");
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-size: contain;
+  background-position-X: -160px;
+  background-position-Y: center;
+  
+}
+.form-logeo h2{
+  display:flex;
+  flex-direction:column;
+  background-color: #005892;
+  padding:20px;
+  margin:0;
+  border-radius: 15px 15px 0 0;
+}
+.icono-ingresoUser{
+  align-self:center;
+}
+.icono-registroUser{
+  align-self:center;
+}
+
+.f-login{
+  width: 300px;
+  margin: auto;
+}
+.forms-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: solid 2px #005892;
+  border-radius:0 0 15px 15px;
+  padding: 20px;
+  margin-bottom:30px;
+  height:308px;
+}
+.forms-login label{
+  margin:10px
+}
+.forms-login input{
+  background-color:rgba(0, 88, 146, 0.41);
+  outline: none;
+  border: none;
+  border-radius:5px;
+  font-size: medium;
+  height: 25px;
+  padding:10px
+
+}
+.btn-form {
+  height:50px;
+  background-color:rgba(0, 88, 146, 0.14);
+  border: solid 1px rgb(255, 255, 255);
+  border-radius: 25px;
+  transition: 0.1s all ease-in;
+  font-size:14px;
+  width: 199px;
+  margin:auto;
+  margin-top: 20px ;
+  height:45px
+}
+.btn-form:hover{
+   background-color:rgba(0, 88, 146, 0.54);
+}
+.link-google {
+  cursor: pointer;
+  margin: auto;
+  margin-top: 20px;
+  width:200px;
+}
+.link-google:hover{
+  scale:0.95;
+}
+.link-logeo{
+  cursor: pointer;
+  margin: auto;
+  margin-top: 50px;
+  margin-top:20px;
+  color: rgba(163, 38, 90, 0.877);
+  font-weight:bolder;
+}
+
+.btn-cerrarSesion{
+  font-size: medium;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+}
+.btn-cerrarSesion:hover{
+  background-color: #005892;
+  color: black;
+  border-radius: 30px;
+}
+.icono-cerrarSesion{
+  margin-left: 10px;
+
+  font-size: 25px;
+}
+
+.footer {
+  background-color: #005892;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  border-radius: 10px;
+  margin: 50px 0 15px;
+}
+
+/*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*  ++++++++++++++++++++++++ Media querys ++++++++++++++++++++++++++++*/
+/*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/* Teléfonos pequeños hasta 480px de ancho */
+
+@media (max-width: 620px) {
+  /* BANNER */
+  #root {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+  }
+  .div-banner {
+    display: block;
+    max-width: 430vw;
+  }
+  .nav {
+    max-width: 100iw;
+    margin: 10px;
+    height: auto;
+  }
+  .nav-ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.4s ease-in-out, opacity 0.6s ease-in-out;
+    background-color: #0058922a;
+    margin-bottom: 100px;
+  }
+  .nav-ul li {
+    border-bottom: #005892 solid 2px;
+  }
+  .nav-ul li a {
+    width: 280px;
+  }
+  .nav-ul li:hover {
+    background-color: rgba(111, 83, 156, 0.486);
+    border-top: none;
+    text-align: center;
+    scale: 1.12;
+    margin: auto;
+    width: 100%;
+    margin: 2px auto;
+    transition: scale 0.2s liease-in-outnear;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  .hamburguesa-menu {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: black;
+    border: none;
+  }
+  .icon-hamburguesa {
+    scale: 2;
+    color: rgba(109, 64, 182, 0.89);
+  }
+  .nav-visible {
+    position: relative;
+    display: flex;
+    max-height: 400px;
+    opacity: 1;
+    margin-bottom: 100px;
+  }
+  .nav-link {
+    display: block;
+    width: 140px;
+    margin: auto;
+  }
+
+/* DETALLES EN EL CARRITO DE COMPRAS */
+
+  .div-cards-detalle {
+    width: 300px;
+  }
+  .carrito-cards {
+    grid-template-columns: 170px 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "titulo titulo"
+      "img cant"
+      "img precioT"
+      "img x";
+    justify-items: center;
+    border-radius: 15px;
+    height: 250px;
+    border: dashed 4px grey;
+    max-width: 360px;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+  .image-art {
+    grid-area: img;
+    width: 150px;
+    height: 150px;
+
+    align-self: start;
+    justify-self: end;
+  }
+
+  .btn-eliminar {
+    width: 100px;
+    align-self: start;
+  }
+   .btn-eliminar:hover{
+    width: 100px;
+   }
+  .art-titulo {
+    grid-area: titulo;
+    margin: 0;
+  }
+  .art-precio {
+    grid-area: precioT;
+    align-self: start;
+    margin: 0;
+  }
+  .cantidad {
+    grid-area: cant;
+  }
+
+  /* BARRA DE BUSQUEDA */
+
+  .barra-busqueda {
+    flex-direction: column;
+  }
+  .barra-busqueda label,
+  #busqueda {
+    margin-right: 0;
+  }
+  .icon-lupa {
+    left: -10px;
+  }
+
+  /* FORMULARIO CONTACTO */
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    width: 290px;
+  }
+  .p-formulario {
+    text-align: center;
+  }
+
+  /* FORMULARIO ALTA DE ARTICULOS */
+
+  .form-cargaArt {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 350px;
+    height:500px;
+  
+}
+.carga-desc{
+  align-self:center;
+}
+.carga-descUrl{
+  height:200px;
+  width: 320px;
+}
+.form-cargaArt input {
+  width: 320px;
+}
+.btn-enviar{
+  margin-top:50px;
+  width: 320px;
+}
+
+
+}
+
+
+
+/* Dispositivos pantallas grandes de 620px hasta 1049px de ancho  */
+
+@media (min-width: 620px) and (max-width: 1049px) {
+  #root {
+    width: 95%;
+    margin: 0;
+    margin: auto;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .carrito-cards {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr) 90px;
+    grid-template-rows: 1fr;
+    grid-template-areas: "img titulo titulo titulo cant precioU precioT . x";
+    justify-items: center;
+    border-radius: 15px;
+    border: dashed 4px grey;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+  .image-art {
+    grid-area: img;
+    margin-left: 20px;
+  }
+  .btn-eliminar {
+    grid-area: x;
+  }
+  .art-titulo {
+    grid-area: titulo;
+    align-self: center;
+  }
+  .art-precio {
+    grid-area: precioT;
+  }
+  .cantidad {
+    grid-area: cant;
+  }
+}

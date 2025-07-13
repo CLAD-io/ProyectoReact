@@ -1,0 +1,226 @@
+.barra-busqueda{
+    margin: 30px;
+    display: flex;
+    justify-content: flex-end;
+    background: #020024;
+background: linear-gradient(90deg, rgba(2, 0, 36, 1) 6%, rgba(0, 212, 255, 0.77) 100%);
+    padding: 30px 0;
+    border-radius: 5px;
+}
+.barra-busqueda label{
+    margin-right: 30px;
+    font-size: larger;
+}
+.icon-lupa{
+    position: relative;
+    top: 4px;
+    left: -40px;
+    opacity: 0.7;
+    color: #020024;
+}
+#busqueda{
+    scale: 1.2;
+    background-color: aliceblue;
+    border:  none;
+    outline: none;
+    border-radius: 3px;
+    margin-right: 30px;
+    color: #292929;
+}
+#busqueda:focus{
+    box-shadow: 0 0 0 2px #5b9dd9;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70vw;
+    justify-content: center;
+    align-content: flex-start;
+    margin: auto;
+    gap: 20px;
+    flex-basis: initial;
+    background-image: url("../assets/musicFondo.png");
+    background-size: contain;
+    
+
+}
+.cards-container{
+    width: 200px;
+    padding: 0 20px 20px 20px ;
+    background-color: rgba(43, 122, 187, 0.445);
+    clip-path: polygon(50% 5%, 100% 0, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 0);
+}
+
+/* DETALLES DE CADA CARD */
+.div-cards-detalle{
+    width: 400PX;
+    background-color: rgba(43, 122, 187, 0.445);
+    padding: 10px;
+    margin: auto;
+    border-radius: 20px;
+}
+.card-img{
+    width: 180px;
+    height: 190px;
+}
+.card-titulo{
+    height: 100px;
+    align-content: center;
+}
+.selectCantidad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+.selectCantidad button{
+    height: 30px;
+    border: none;   
+    width: 35px;
+    cursor: pointer;
+}
+/* BOTON AGREGAR AL CARRITO */
+.selectCantidad button:hover{
+    background-color: rgba(43, 122, 187, 0.849);
+}
+.btn-agregarAlCarrito{
+    max-width: 200px;
+    height: 50px;
+    font-size: medium;
+    border: none;
+    background-color: transparent;
+    margin: 15px auto 0;
+    border-radius: 12px;
+    background-color: rgba(43, 122, 187, 0.445);
+    margin-bottom: 20px;
+}
+.btn-agregarAlCarrito:hover{
+    background-color: rgba(43, 122, 187, 0.849);
+}
+.btn-mas, .btn-menos{
+    background-color: rgba(43, 122, 187, 0.445);
+    border-radius: none;
+}
+button{
+    cursor: pointer;
+}
+
+/* BOTONES DE EDITAR Y BORRAR */
+
+.btn-admin{
+    width: 80px;
+    margin: 13px;
+    height: 30px;
+}
+
+/* Estilos para cards de productos ya selecionados en el carrito */
+
+.carrito-cards{
+    display: grid;
+    grid-template-columns: repeat(8,1fr) 90px;
+    grid-template-rows: 1fr;
+    grid-template-areas: "img titulo desc desc desc cant precioU precioT x";
+    align-items: center;
+    justify-items: center;
+    border-radius: 15px;
+    height: 125px;
+    border: dashed  4px grey;
+    margin: 10px;
+
+}
+.image-art{
+    grid-area: img;
+    width: 100px;
+    height: 100px;
+}
+.art-titulo{
+    grid-area: titulo;
+}
+.desc-art{
+    grid-area: desc;
+}
+.art-precio{
+    grid-area: precioT;
+}
+.cantidad{
+grid-area: cant;
+}
+.art-precio-uni{
+    grid-area: precioU;
+}
+.btn-eliminar{
+    grid-area: x;
+    height: 25px;
+    width: 25px;
+}
+.btn-eliminar:hover{
+    background-color: #ff0000;
+    border: none;
+    color:#000000;
+    text-transform: lowercase;
+    height: 25px;
+    width: 25px;
+    border-radius: 3px;
+
+}
+
+/* BOTON VER MAS */
+
+.btn-verMas{
+    background-color: rgba(43, 122, 187, 0.445);
+    width: 150px;
+    height: 50px;
+    font-size: larger;
+    border:none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;    
+    
+}
+.btn-verMas span{
+    z-index: 2;
+    position: relative;
+}
+.btn-verMas::after{
+    content: " ";
+    background-color: rgba(163, 38, 90, 0.877);
+    position: absolute;
+    right:150px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+.btn-verMas:hover::after{
+    right: 0px;
+}
+
+
+
+/* PAGINADOR */
+
+.paginador{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-primary{
+    background-color: #f03b3b;
+    border: none;
+    scale: 1.6;
+    width: 20px;
+    height: 20px;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+.btn-outline-primary{
+    background-color: #94a8bb;
+    border: none;
+    scale: 1.6;
+    width: 20px;
+    height: 20px;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
