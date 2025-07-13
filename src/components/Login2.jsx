@@ -7,6 +7,7 @@ import { Helmet } from "react-helmet";
 import { FaUser } from "react-icons/fa";
 import { FaUserPlus } from "react-icons/fa6";
 import { IoMdExit } from "react-icons/io";
+import btnGoogle from '../assets/btn-google.png';
 
 
 
@@ -110,7 +111,7 @@ function cerrarSesion(){
           <label>Password</label>
           <input type="password" name="password" value={passwordInicio} onChange={(evento) => setPasswordInicio(evento.target.value)} placeholder='password' />
           <button type="submit" className="btn-form">Iniciar sesion</button>
-          <img src="/public/btn-google.png" alt="" onClick={loginGmail} className="link-google"/>
+          <img src={btnGoogle} alt="" onClick={loginGmail} className="link-google"/>
         </div>
       </form>
       </div>
@@ -140,7 +141,7 @@ function cerrarSesion(){
       </div>
       <p>Ya tienes cuenta? <span className="link-logeo" onClick={handleShow}>Iniciar sesion</span></p>
       <p></p>
-      <img src="./src/assets/btn-google.png" alt="" onClick={loginGmail} className="link-google"/>
+      <img src={btnGoogle} alt="" onClick={loginGmail} className="link-google"/>
       </div>
       )
     }
